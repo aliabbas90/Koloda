@@ -636,8 +636,6 @@ open class KolodaView: UIView, DraggableCardDelegate {
                     nextCard.alpha = shouldTransparentizeNextCard ? alphaValueSemiTransparent : alphaValueOpaque
                 }
                 
-                animationSemaphore.increment()
-                
                 frontCard.swipe(direction) {
                     self.animationSemaphore.decrement()
                 }
